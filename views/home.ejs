@@ -1,0 +1,31 @@
+<nav class="main-navigation">
+  <div class="navbar-header animated fadeInUp">
+    <a style="font-size: 50px" class="navbar-brand" href="#">Sender</a>
+  </div>
+  <ul class="nav-list">
+    <li class="nav-list-item">
+      <a href="#" class="nav-link">Home</a>
+    </li>
+    <li class="nav-list-item">
+      <a href="#" class="nav-link">Daily</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="d-flex justify-content-center">
+    <div style="padding: 50px" class="card">
+  <form action="/send" method="POST">
+    <input
+    style="width: 400px"
+      type="number"
+      class="form-control"
+      name="phone"
+      id="phone"
+      placeholder="Enter phone number"
+      value=""
+    /></br>
+    <textarea rows="5" class="md-textarea form-control" id="myMessage" name="myMessage"></textarea></br>
+    <button style="float:right" type="submit" class="btn btn-primary">Send</button>
+  </form>
+</div>
+</div>
