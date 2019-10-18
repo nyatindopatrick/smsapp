@@ -28,8 +28,7 @@ module.exports = autosend = () => {
   const date = new Date();
   const hour = date.getHours();
   const mins = date.getMinutes();
-  if (hour === 19 && mins === 45) {
+  if (hour === 15 && mins === 39) {
     console.log("It is time");
   }
 };
-

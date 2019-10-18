@@ -1,6 +1,7 @@
 require("dotenv").config();
 const bcrypt = require("bcrypt");
 const Admin = require("../models/admin");
+const passport = require("passport");
 
 module.exports = router => {
   router.post("/register", (req, res) => {
@@ -27,6 +28,13 @@ module.exports = router => {
         });
       });
     });
+  });
+
+  router.post("/login", (req, res, next) => {
+    passport.authenticate("local", {
+      successRedirect: "/home",
+      failureRedirect: "/"
+    })(req, res, next);
   });
 
   router.post("/send", (req, res) => {
@@ -61,4 +69,9 @@ module.exports = router => {
     sendMessage();
     res.status(200).redirect("/home");
   });
+
+  router.get("/logout", (req,res)=>{
+    req.logout()
+    res.redirect("/")
+  })
 };

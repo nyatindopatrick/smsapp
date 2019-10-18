@@ -9,12 +9,16 @@
     <li class="nav-list-item">
       <a href="#" class="nav-link">Daily</a>
     </li>
+    <li class="nav-list-item">
+      <a href="/logout" class="nav-link">logout</a>
+    </li>
   </ul>
 </nav>
 
 <div class="d-flex justify-content-center">
     <div style="padding: 50px" class="card">
   <form action="/send" method="POST">
+    <h5><%=greeting%> <%=user.name%></h5>
     <input
     style="width: 400px"
       type="number"
